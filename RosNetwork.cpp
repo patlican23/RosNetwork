@@ -13,6 +13,17 @@
 
 int main(int argc, char* argv[]){
   cout<< "It works" << endl;
+
+  ifstream config_file("network.config");
+  if(config_file.is_open()){
+    string line;
+    while(getline(config_file, line)){
+      cout << line << '\n';
+    }
+    config_file.close();
+  }else{
+    cout << "Cannot open config file" << endl;
+  }
 }
 
 RosNetwork::RosNetwork(){
