@@ -27,7 +27,14 @@ public:
   int main(int, char*);
   RosNetwork();
   virtual ~RosNetwork();
+  bool estConnect(const char*);
+  bool sendPath(char const*);
 private:
+  //Not going to worry about file transfer rn because
+    //image files will be stored locally.
+    //The only thing that ros needs to transfer is
+    //path data and current telemetry between the robots
+    //and the cameras
 };
 
 #endif  /*ROSNETWORK_H_*/
